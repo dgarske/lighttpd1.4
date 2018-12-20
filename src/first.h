@@ -13,6 +13,10 @@
 #define __STDC_WANT_LIB_EXT1__ 1
 #endif
 
+#ifdef HAVE_WOLFSSL_SSL_H
+    #include <wolfssl/options.h>
+#endif
+
 #ifdef __COVERITY__
 #define _Float128 long double
 #define _Float64x long double

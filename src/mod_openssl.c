@@ -22,6 +22,11 @@
 #ifndef OPENSSL_NO_DH
 #include <openssl/dh.h>
 #endif
+#ifdef HAVE_WOLFSSL_SSL_H
+#include <openssl/bio.h>
+#include <openssl/objects.h>
+#include <openssl/pem.h>
+#endif
 
 #if ! defined OPENSSL_NO_TLSEXT && ! defined SSL_CTRL_SET_TLSEXT_HOSTNAME
 #define OPENSSL_NO_TLSEXT
